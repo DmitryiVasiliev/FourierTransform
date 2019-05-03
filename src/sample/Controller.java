@@ -83,10 +83,10 @@ public class Controller {
             this.image = Imgcodecs.imread(file.getAbsolutePath(), Imgcodecs.IMREAD_GRAYSCALE);
             image.copyTo(image1);
             mats.add(image1);
-            xMin = this.image.cols() / 2 - 1;
-            yMin = this.image.rows() / 2 - 1;
-            xMax = this.image.cols() / 2 + 1;
-            yMax = this.image.rows() / 2 + 1;
+            xMin = this.image.cols() / 2 - 5;
+            yMin = this.image.rows() / 2 - 5;
+            xMax = this.image.cols() / 2 + 5;
+            yMax = this.image.rows() / 2 + 5;
             // make black hole
             Imgproc.rectangle(this.image, new Point((xMin), (yMin)), new Point(xMax, (yMax)), new Scalar(0, 0, 0, 0), -1);
             this.image.copyTo(image2);
